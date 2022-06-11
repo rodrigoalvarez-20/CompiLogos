@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 import modelo.Configuracion;
 import modelo.Linea;
@@ -36,6 +39,7 @@ public class PanelDeDibujo extends JPanel{
         Polygon triangulo = triangulo(configuracion.getX(), configuracion.getY(), configuracion.getAngulo());
         g.drawPolygon(triangulo);
         g.fillPolygon(triangulo);
+        
     }
 
     public Polygon triangulo(double x, double y, int angulo){
